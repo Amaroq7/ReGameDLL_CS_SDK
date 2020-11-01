@@ -1,2 +1,2 @@
-# ReGameDLL_CS_SDK
-ReGameDLL_CS SDK
+# CSSDK
+Counter-Strike SDK API Version 5.3
