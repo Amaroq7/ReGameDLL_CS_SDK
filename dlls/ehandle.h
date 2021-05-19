@@ -186,7 +186,7 @@ template <typename T>
 inline T *EntityHandle<T>::operator->()
 {
 	edict_t *pEdict = Get();
-	assert(("EntityHandle<T>::operator->:  pointer is nullptr!", pEdict != nullptr));
+	//assert(("EntityHandle<T>::operator->:  pointer is nullptr!", pEdict != nullptr));
 
 	T *pEntity = (T *)GET_PRIVATE(pEdict);
 	assert(("EntityHandle<T>::operator->:  pvPrivateData is nullptr!", pEntity != nullptr));

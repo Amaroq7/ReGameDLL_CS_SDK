@@ -1,2 +1,2 @@
 # CSSDK
-Counter-Strike SDK API Version 5.3
+Counter-Strike SDK API Version 5.20
