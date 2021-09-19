@@ -117,7 +117,7 @@ inline bool EntityHandle<T>::IsValid() const
 		return false;
 	}
 
-	CBaseEntity *pEntity = (CBaseEntity *)GET_PRIVATE(pEdict);
+	CBaseEntity *pEntity = (CBaseEntity *)pEdict->pvPrivateData;
 	if (!pEntity)
 	{
 		return false;
@@ -186,9 +186,9 @@ template <typename T>
 inline T *EntityHandle<T>::operator->()
 {
 	edict_t *pEdict = Get();
-	//assert(("EntityHandle<T>::operator->:  pointer is nullptr!", pEdict != nullptr));
+	assert(("EntityHandle<T>::operator->:  pointer is nullptr!", pEdict != nullptr));
 
-	T *pEntity = (T *)GET_PRIVATE(pEdict);
+	T *pEntity = (T *)pEdict->pvPrivateData;
 	assert(("EntityHandle<T>::operator->:  pvPrivateData is nullptr!", pEntity != nullptr));
 	return pEntity;
 }
