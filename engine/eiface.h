@@ -429,7 +429,7 @@ typedef struct
 #define ARRAYSIZE(p)		(sizeof(p)/sizeof(p[0]))
 #endif
 
-typedef struct
+typedef struct DLL_FUNCTIONS
 {
 	// Initialize/shutdown the game (one-time call after loading of game .dll )
 	void			(*pfnGameInit)			( void );
@@ -521,7 +521,7 @@ extern DLL_FUNCTIONS		gEntityInterface;
 // Current version.
 #define NEW_DLL_FUNCTIONS_VERSION	1
 
-typedef struct
+typedef struct NEW_DLL_FUNCTIONS
 {
 	// Called right before the object's memory is freed.
 	// Calls its destructor.
